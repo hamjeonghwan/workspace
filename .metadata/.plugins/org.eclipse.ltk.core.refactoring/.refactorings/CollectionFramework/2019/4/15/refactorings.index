@@ -1,3 +1,5 @@
 1554694789765	Encapsulate field 'id'
 1554694792782	Encapsulate field 'name'
 1554718352462	Delete element
+1554790145824	Encapsulate field 'tel'
+1554790149763	Encapsulate field 'addr'
