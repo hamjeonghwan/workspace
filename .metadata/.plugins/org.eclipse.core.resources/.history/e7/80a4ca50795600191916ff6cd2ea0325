@@ -1,0 +1,9 @@
+package kr.or.ddit.basic;
+
+import java.util.Vector;
+
+public class T01_vectorTest {
+	// vector => List 계열 클래스 
+	
+	Vector v1 = new Vector();
+}

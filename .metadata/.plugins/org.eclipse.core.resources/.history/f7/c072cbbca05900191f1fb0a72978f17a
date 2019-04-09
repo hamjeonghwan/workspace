@@ -1,0 +1,24 @@
+package kr.or.ddit.basic;
+
+import java.util.SortedSet;
+import java.util.TreeSet;
+
+public class T10_SetTest {
+	// HashSet은 데이터에 순서가 없으나
+	// TreeSet은 자동정렬 기능이 들어가 있다 
+	public static void main(String[] args) {
+		
+	TreeSet<String> ts = new TreeSet<>();
+	
+	for(char ch = 'Z'; ch >='A'; ch--) {
+		String temp = String.valueOf(ch);
+		ts.add(temp);
+	}
+	System.out.println("TreeSet 자료 : " + ts);
+	// TreeSet에 저정된 자료 중 특정한 자료보다 작은 자료를 찾아서 SortedSet으로 변환하는 메서드가 있다 
+	// => headSet(기준값) 메서드 (기본적으로 '기준값'은 포함시키지 않는다)
+	// => headSet(기준값, 논리값) ( 논리값이 true 이면 '기준값' 을 포함시킨다 
+	SortedSet<String> ss1 = ts.headSet("K");
+	System.out.println();
+	}
+}

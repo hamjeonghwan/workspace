@@ -1,0 +1,8 @@
+package kr.or.ddit.basic;
+
+public class T04_ArrayListTest {
+		// 문제 5명의 벌명을 입력하여 ArrayList에 저장하고 
+		// 별명의 길이가 제일 긴 별명을 출력하시오
+	
+	
+}

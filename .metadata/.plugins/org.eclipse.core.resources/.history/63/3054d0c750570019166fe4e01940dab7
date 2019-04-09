@@ -1,0 +1,16 @@
+package kr.or.ddit.basic;
+
+public class T07_ListSortTest {
+
+}
+class Member implements Comparable<Member>{
+		// 번호
+		private int num; 
+		// 이름
+		private String name;
+		// 전화번호
+		private String tel;
+
+	
+	
+}

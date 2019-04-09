@@ -1,0 +1,17 @@
+package kr.or.ddit.basic;
+
+import java.util.TreeSet;
+
+public class T10_SetTest {
+	// HashSet은 데이터에 순서가 없으나
+	// TreeSet은 자동정렬 기능이 들어가 있다 
+	public static void main(String[] args) {
+		
+	TreeSet<String> ts = new TreeSet<>();
+	
+	for(Char ch = 'Z'; ch >='A'; ch--) {
+		String temp = String.valueOf(ch);
+		ts.add(temp);
+	}
+	}
+}
