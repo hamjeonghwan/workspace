@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sqlMap
+			PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN"
+			"http://ibatis.apache.org/dtd/sql-map-2.dtd">
+<sqlMap namespace="ProdVO">
+
+	<select id="getLprod" resultClass="String">
+		SELECT LPROD_NM FROM LPROD
+	</select>
+	
+	<select id="getProdName" parameterClass="String" resultClass="String">
+		SELECT PROD_NAME
+		FROM PROD A, (SELECT LPROD_GU AS GU 
+						FROM LPROD 
+						WHERE LPROD_NM = #lProd#) B
+		WHERE A.PROD_LGU = B.GU
+	</select>
+	
+	<select id="getProd" parameterClass="HashMap" resultClass="ProdVO">
+		SELECT PROD_ID, PROD_NAME, PROD_LGU, PROD_BUYER, PROD_COST, PROD_PRICE, PROD_SALE, PROD_OUTLINE, PROD_DETAIL
+		FROM PROD A, (SELECT LPROD_GU AS GU 
+						FROM LPROD 
+						WHERE LPROD_NM = #prod_Lgu#) B
+		WHERE PROD_LGU = B.GU
+		AND PROD_NAME = #prod_Name#
+	</select>
+
+</sqlMap>			

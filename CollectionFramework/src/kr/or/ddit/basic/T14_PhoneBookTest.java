@@ -95,7 +95,6 @@ public class T14_PhoneBookTest {
 	}
 
 	private static void PhoneView() {
-		Scanner s = new Scanner(System.in);
 
 		System.out.println(" =======================================");
 		System.out.println("번호 \t이름 \t 전화번호 \t \t주소 ");
@@ -117,12 +116,12 @@ public class T14_PhoneBookTest {
 		System.out.println("검색할 이름을 입력하세요");
 		System.out.println("이름  >>> ");
 		String phoneName = s.nextLine();
-		
-		if(Phonemap.get(phoneName) == null) {
+
+		if (Phonemap.get(phoneName) == null) {
 			System.out.println("이름이 없져요");
 		} else {
 			System.out.println(Phonemap.get(phoneName));
-			
+
 		}
 
 	}
@@ -137,16 +136,16 @@ public class T14_PhoneBookTest {
 		Scanner s = new Scanner(System.in);
 		System.out.println("수정할 이름  >>> ");
 		String phoneName = s.nextLine();
-		if(Phonemap.get(phoneName) == null) {
+		if (Phonemap.get(phoneName) == null) {
 			System.out.println("수정할 이름이 없져요");
 		} else {
 			System.out.println("전화번호 >>> ");
 			String phoneNum = s.nextLine();
-			
+
 			System.out.println("주소 >>> ");
 			String phoneaddr = s.nextLine();
 
-		Phonemap.put(phoneName, new Phone(phoneNum, phoneaddr));
+			Phonemap.put(phoneName, new Phone(phoneNum, phoneaddr));
 		}
 	}
 
@@ -157,11 +156,16 @@ public class T14_PhoneBookTest {
 
 		System.out.println("이름  >>> ");
 		String phoneName = s.nextLine();
-
+		
+		if(Phonemap.get(phoneName) != null) {
+			System.out.println(phoneName + "씨는 이미 등록된 사람입니다");
+			return;
+		}
 		System.out.println("전화번호 >>> ");
 		String phoneNum = s.nextLine();
 
 		System.out.println("주소 >>> ");
+
 		String phoneaddr = s.nextLine();
 
 		Phonemap.put(phoneName, new Phone(phoneNum, phoneaddr));

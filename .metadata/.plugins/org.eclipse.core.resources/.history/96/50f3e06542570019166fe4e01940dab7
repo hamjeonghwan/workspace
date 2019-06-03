@@ -1,7 +1,0 @@
-package kr.or.ddit.basic;
-
-public class T05_StackQueueTest {
-	public static void main(String[] args) {
-		// 스택 => 
-	}
-}

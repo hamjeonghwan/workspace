@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sqlMap
+			PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN"
+			"http://ibatis.apache.org/dtd/sql-map-2.dtd">
+<!-- namespace속성 : 아래에서 작성한 SQL을 호출할 때 같이 사용된다. -->		
+	
+<sqlMap namespace="prod">
+ <!-- 대분류이름 -->
+	<select id = "lprod_nm" resultClass="String">
+	select lprod_nm from lprod
+	</select>
+<!-- 소분류이름 -->
+	<select id = "prod_nm" resultClass="String" parameterClass = "String">
+	select prod_name from prod, (select lprod_gu as gu from lprod where lprod_nm = #lprod_gu#) b where prod_lgu = b.gu
+	</select>
+<!-- 상품이름 고른거랑 같은 상품 정보 다 가져와야합니다 -- >	
+	<select id = "prodInfo" resultClass="ProdVO" parameterClass = "String"> 
+		select
+		prod_id,
+		prod_name,
+		prod_lgu,
+		prod_buyer,
+		prod_cost,
+		prod_price,
+		prod_sale,
+		prod_outline,
+		prod_detail from prod where prod_name = #prod_name#
+	</select>
+
+</sqlMap>

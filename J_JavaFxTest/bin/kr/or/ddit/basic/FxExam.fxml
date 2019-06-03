@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.TextField?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="kr.or.ddit.basic.FxExam">
+   <children>
+      <TextField  fx:id="name" layoutX="23.0" layoutY="13.0" text="이 름 :" />
+      <Label fx:id="la2" layoutX="23.0" layoutY="42.0" text="성 별 :" />
+      <Label fx:id="la3" layoutX="23.0" layoutY="74.0" text="취 미 :" />
+      <Button fx:id="btn1" layoutX="19.0" layoutY="145.0" mnemonicParsing="false" onAction="#btnClick" text="보 기" />
+      <TextArea fx:id="txtResult" layoutX="15.0" layoutY="180.0" prefHeight="200.0" prefWidth="371.0" />
+      <RadioButton fx:id="man" layoutX="72.0" layoutY="43.0" mnemonicParsing="false" selected="true" text="남">
+         <toggleGroup>
+            <ToggleGroup fx:id="gender" />
+         </toggleGroup></RadioButton>
+      <RadioButton fx:id="woman" layoutX="120.0" layoutY="43.0" mnemonicParsing="false" text="여" toggleGroup="$gender" />
+      <CheckBox fx:id="trip" layoutX="73.0" layoutY="73.0" mnemonicParsing="false" text="여행" />
+      <CheckBox fx:id="hiking" layoutX="121.0" layoutY="73.0" mnemonicParsing="false" text="등산" />
+      <CheckBox fx:id="book" layoutX="175.0" layoutY="73.0" mnemonicParsing="false" text="독서" />
+      <CheckBox fx:id="go" layoutX="228.0" layoutY="73.0" mnemonicParsing="false" text="바둑" />
+      <CheckBox fx:id="chess" layoutX="284.0" layoutY="73.0" mnemonicParsing="false" text="장기" />
+      <CheckBox fx:id="game" layoutX="73.0" layoutY="100.0" mnemonicParsing="false" text="게임" />
+      <CheckBox fx:id="tennis" layoutX="122.0" layoutY="100.0" mnemonicParsing="false" text="테니스" />
+      <CheckBox fx:id="badminton" layoutX="183.0" layoutY="100.0" mnemonicParsing="false" text="배드민턴" />
+   </children>
+</Pane>
